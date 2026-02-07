@@ -64,19 +64,19 @@ export default function Tea() {
         <div className="row mt-5 mb-3 justify-content-center gap-5">
          <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <div className=" feature-img ">
-            <a href="images/ken-tea2.webp" data-lightbox="portfolio"><img className="img-fluid rounded-3" src="src/assets/images/ken-tea2.webp"
+            <a href="images/ken-tea2.webp"><img className="img-fluid rounded-3" src="src/assets/images/ken-tea2.webp"
               alt=""/></a>
           </div>
          </div>
          <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <div className=" feature-img ">
-            <a href="images/ken-tea3.webp" data-lightbox="portfolio"><img className="img-fluid rounded-3" src="src/assets/images/ken-tea3.webp"
+            <a href="images/ken-tea3.webp"><img className="img-fluid rounded-3" src="src/assets/images/ken-tea3.webp"
               alt=""/></a>
           </div>
          </div>
           <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <div className=" feature-img ">
-            <a href="images/ken-tea4.webp" data-lightbox="portfolio"><img className="img-fluid rounded-3" src="src/assets/images/ken-tea4.webp"
+            <a href="images/ken-tea4.webp" ><img className="img-fluid rounded-3" src="src/assets/images/ken-tea4.webp"
               alt=""/></a>
           </div>
          </div>
