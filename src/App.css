@@ -1,0 +1,881 @@
+/* Navbar */
+@media (min-width: 320px) and (max-width: 359px) {
+    .navbar-brand img {
+    height: 66px;
+    width: 176px;
+    object-fit: contain;
+    }
+    .navbar .navbar-brand {
+        width: 130px;
+        top: -11px;
+        left: -9px; 
+    }
+
+    .headerImg{
+        height: 90px;
+        object-fit: cover;
+    }
+    .navbar{
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+        border: none;
+        position: absolute;
+    right: 0;
+    top: 13px;
+    }
+    .navBar{
+        padding: 0 ;
+    }
+    .navbar-nav{
+        position: absolute;
+        background-color: #fff;
+        padding: 25px;
+        right: -100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: start;
+        margin: 0 !important;
+    }
+    .show .navbar-nav{
+        width: 210px;
+        padding: 15px;
+        right: 0;
+        top: 85px;
+    }
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        color: #10356d !important;
+        font-size: 20px;
+    }
+
+    
+    .navbar-brand::before{
+        left: 8px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+    color: #6bdafc !important;
+    transition: all 0.3s ease-in-out;
+   }
+
+   /* section title */
+   .section-title-div, .section-title-div2{
+    width: 100%;
+   }
+   .section-title{
+     margin-bottom: 30px !important;
+   }
+
+   .aboutBg{
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+   }
+
+   .ceo-img{
+    width: 300px;
+    height: 360px;
+   }
+   .brandImgDiv{
+    gap: 15px;
+   }
+   
+   .certificate-img{
+    width: 291px;
+    height: 205px;
+    margin-bottom: 15px;
+   }
+  .hilal-img{
+    width: 225px; 
+    height: 225px;
+    margin-left: 20px;
+  }
+  .certificate{
+    text-align: center;
+  }
+  .feature-img {
+    position: relative;
+    margin: 0;
+    
+}
+.stick-img1{
+    height: 618px;
+}
+.stick-img2{
+    height: 746px;
+}
+.stick-img3{
+    height: 676px;
+}
+
+.feature-img img {
+    position: relative;
+}
+
+
+.feature-img img:last-child {
+    margin: 0;
+}
+
+/* .event-img img{
+    height: 285px;
+    width: 300px;
+} */
+.feature-img::before {
+    position: absolute;
+   content: none;
+}
+.productImg img{
+    height: 285px;
+    width: 300px;
+}
+.rotateBgImg::after{
+    content: "";
+    position: absolute;
+    top: 293px;
+    inset-inline: auto;
+    width: 70px;
+    height: 70px;
+    background:   url(../images/icons8-down-arrow-70.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.rotateBgImgRow{
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    justify-content: center;
+}
+  
+
+.home-bg {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.bg-video{
+    object-fit: cover;
+}
+
+
+
+   /* wavy Images */
+
+   .whiteHeaderImg{
+    object-fit: cover;
+     bottom: -24px;
+    height: 59px;
+  }
+   .wavyBottomImg{
+    object-fit: cover;
+    height: 50px;
+    bottom: -49px;
+   }
+   .wavyTopImg{
+    object-fit: cover;
+    top: -46px;
+    height: 48px;
+   }
+   .pinkTopWavyImg{
+    object-fit: cover;
+   }
+   .wavyTopImgVision{
+    object-fit: cover;
+    top: -100px;
+   }
+   .brownHeaderImg{
+    object-fit: cover;
+    height: 70px;
+    top: -28px;
+   }
+   .pinkBottomWavyImg{
+    top: -30px;
+    height: 48px;
+    object-fit: cover;
+   }
+}
+
+
+
+@media (min-width: 360px) and (max-width: 392px) {
+
+  .nav.nav-pills {
+    justify-content: space-between;
+  }
+
+  .service-item {
+    width: 48%;        
+    margin: 10px 0;
+  }
+
+  .service-item .service-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .service-item h5 {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+    
+    .navbar .navbar-brand {
+    width: 130px;
+    top: -11px;
+    left: -9px;
+    }
+    .navbar-brand img {
+    height: 69px;
+    width: 176px;
+    object-fit: contain;
+    }
+    .headerImg{
+        height: 90px;
+        object-fit: cover;
+    }
+    .navbar{
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+        border: none;
+        position: absolute;
+    right: 0;
+    top: 13px;
+    }
+    .navBar{
+        padding: 0 ;
+    }
+    .navbar-nav{
+        position: absolute;
+        background-color: #fff;
+        padding: 25px;
+        right: -100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: start;
+        margin: 0 !important;
+    }
+    .show .navbar-nav{
+        padding: 15px;
+        right: 0;
+        width: 210px;
+        top: 85px;
+    }
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        color: #10356d !important;
+        font-size: 20px;
+    }
+
+    
+    .navbar-brand::before{
+        left: 8px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+    color: #6bdafc !important;
+    transition: all 0.3s ease-in-out;
+   }
+
+   /* section title */
+   .section-title-div, .section-title-div2{
+    width: 100%;
+   }
+   .section-title{
+     margin-bottom: 30px !important;
+   }
+   .ceo-img{
+    width: 300px;
+    height: 370px;
+   }
+
+   .aboutBg{
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+   }
+
+   .brandImgDiv{
+    gap: 18px;
+   }
+   
+   .certificate-img{
+    width: 291px;
+    height: 205px;
+    margin-bottom: 15px;
+   }
+  .hilal-img{
+    width: 225px; 
+    height: 225px;
+    margin-left: 20px;
+  }
+  .certificate{
+    text-align: center;
+  }
+  .feature-img {
+    position: relative;
+    margin: 0 !important;
+}
+.stick-img1{
+    height: 618px;
+}
+.stick-img2{
+    height: 746px;
+}
+.stick-img3{
+    height: 676px;
+}
+
+.feature-img img {
+    position: relative;
+}
+
+
+.feature-img img:last-child {
+    margin: 0;
+}
+
+/* .event-img img{
+    height: 285px;
+    width: 300px;
+} */
+.feature-img::before {
+    position: absolute;
+   content: none;
+}
+.productImg img{
+    height: 285px;
+    width: 300px;
+}
+.rotateBgImg::after{
+    content: "";
+    position: absolute;
+    top: 297px;
+    inset-inline: auto;
+    width: 70px;
+    height: 70px;
+    background:   url(../images/icons8-down-arrow-70.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.rotateBgImgRow{
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    justify-content: center;
+}
+  
+
+.home-bg {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.bg-video{
+    object-fit: cover;
+}
+
+
+
+   /* wavy Images */
+
+   .whiteHeaderImg{
+    object-fit: cover;
+     bottom: -24px;
+    height: 59px;
+  }
+   .wavyBottomImg{
+    object-fit: cover;
+    height: 50px;
+    bottom: -49px;
+   }
+   .wavyTopImg{
+    object-fit: cover;
+    top: -46px;
+    height: 48px;
+   }
+   .pinkTopWavyImg{
+    object-fit: cover;
+   }
+   .wavyTopImgVision{
+    object-fit: cover;
+    top: -100px;
+   }
+   .brownHeaderImg{
+    object-fit: cover;
+    height: 70px;
+    top: -28px;
+   }
+   .pinkBottomWavyImg{
+    top: -30px;
+    height: 48px;
+    object-fit: cover;
+   }
+}
+
+/* @media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+} */
+
+/* navbar end */
+
+
+@media (min-width: 411px) and (max-width: 432px){
+
+    
+
+    .navbar .navbar-brand {
+        width: 135px;
+        top: -11px;
+        left: -13px;
+    }
+    .headerImg{
+        height: 100px;
+        object-fit: cover;
+    }
+    .navbar{
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+        border: none;
+        position: absolute;
+    right: 0;
+    top: 13px;
+    }
+    .navBar{
+        padding: 0 10px ;
+    }
+
+    .navbar-nav{
+        position: absolute;
+        background-color: #fff;
+        padding: 25px;
+        right: -100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: start;
+        margin: 0 !important;
+    }
+    .show .navbar-nav{
+        padding: 15px;
+        width: 210px;
+        right: 0;
+        top: 85px;
+    }
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        color: #10356d !important;
+        font-size: 20px;
+    }
+    
+    .navbar-brand::before{
+        left: 8px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+    color: #6bdafc !important;
+    transition: all 0.3s ease-in-out;
+   }
+   
+
+
+   /* section title */
+   .section-title-div, .section-title-div2{
+    width: 100%;
+   }
+   .section-title{
+     margin-bottom: 30px !important;
+   }
+
+   .aboutBg{
+    background-size: contain;
+   }
+
+   .brandImgDiv{
+    gap: 15px;
+   }
+   
+   .certificate-img{
+    width: 360px;
+    margin-bottom: 15px;
+   }
+  .hilal-img{
+    width: 260px; 
+    height: 260px;
+    margin-left: 20px;
+  }
+  .certificate{
+    text-align: center;
+  }
+  .feature-img {
+    position: relative;
+    margin: 0 !important;
+}
+.ceo-img{
+    width: 300px;
+    height: 370px;
+   }
+
+.feature-img img {
+    position: relative;
+}
+
+
+.feature-img img:last-child {
+    margin: 0;
+}
+.stick-img1{
+    height: 618px;
+}
+.stick-img2{
+    height: 746px;
+}
+.stick-img3{
+    height: 676px;
+}
+
+
+.feature-img::before {
+    position: absolute;
+   content: none;
+}
+.productImg img{
+    height: 285px;
+    width: 300px;
+}
+.rotateBgImg::after{
+    content: "";
+    position: absolute;
+    top: 293px;
+    inset-inline: auto;
+    width: 70px;
+    height: 70px;
+    background:   url(../images/icons8-down-arrow-70.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.rotateBgImgRow{
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    justify-content: center;
+}
+  
+
+.home-bg {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.bg-video{
+    object-fit: cover;
+}
+
+   /* wavy Images */
+
+   .whiteHeaderImg{
+    object-fit: cover;
+     bottom: -24px;
+    height: 59px;
+  }
+   .wavyBottomImg{
+    object-fit: cover;
+    height: 50px;
+    bottom: -49px;
+   }
+   .wavyTopImg{
+    object-fit: cover;
+    top: -46px;
+    height: 48px;
+   }
+   .pinkTopWavyImg{
+    object-fit: cover;
+   }
+   .wavyTopImgVision{
+    object-fit: cover;
+    top: -100px;
+   }
+   .brownHeaderImg{
+    object-fit: cover;
+    height: 70px;
+    top: -28px;
+   }
+   .pinkBottomWavyImg{
+    top: -30px;
+    height: 48px;
+    object-fit: cover;
+   }
+
+}
+
+@media (min-width: 765px) and (max-width: 1024px){
+
+
+    .navbar .navbar-brand {
+        width: 145px;
+        top: -11px;
+    }
+    .headerImg{
+        height: 110px;
+        object-fit: cover;
+    }
+    .navbar{
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+        border: none;
+    }
+    .navBar{
+        padding: 5px 25px 0 ;
+    }
+    .navbar-toggler-icon{
+        height: 40px;
+        width: 40px;
+    }
+    
+    .navbar-nav{
+        position: absolute;
+        background-color: #fff;
+        padding: 25px;
+        right: -100%;
+        border-radius: 10px;
+        text-align: start;
+        margin: 0 !important;
+    }
+    .show .navbar-nav{
+        right: 0;
+        top: 85px;
+        width: 230px;
+    }
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        color: #463037;
+        font-size: 22px;
+    }
+    .navbar-brand::before{
+        left: 3px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+    color: #F195B2 !important;
+    transition: all 0.3s ease-in-out;
+   }
+   
+
+
+   /* section title */
+   .section-title-div, .section-title-div2{
+    width: 100%;
+   }
+   .section-title{
+     margin-bottom: 30px !important;
+   }
+
+   .aboutBg{
+    background-size: contain;
+   }
+
+
+.dontShow::after{
+    content: "";
+    visibility: hidden;
+
+}
+
+   .brandImgDiv{
+    gap: 15px;
+   }
+   
+   .certificate-img{
+    width: 360px;
+    margin-bottom: 15px;
+   }
+  .hilal-img{
+    width: 260px; 
+    height: 260px;
+    margin-left: 20px;
+  }
+  .certificate{
+    text-align: center;
+  }
+  .feature-img {
+    position: relative;
+}
+
+
+.feature-img img {
+    position: relative;
+}
+
+
+.feature-img img:last-child {
+    margin: 0;
+}
+
+
+.feature-img::before {
+    position: absolute;
+   content: none;
+}
+.productImg img{
+    height: 285px;
+    width: 300px;
+}
+.rotateBgImg::after{
+    content: "";
+    position: absolute;
+    top: 278px;
+    inset-inline: auto;
+    width: 70px;
+    height: 70px;
+    background:   url(../images/icons8-down-arrow-70.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.rotateBgImgRow{
+    display: flex;
+   flex-wrap: wrap;
+    gap: 67px;
+    justify-content: center;
+}
+  
+
+.home-bg {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.bg-video{
+    object-fit: cover;
+}
+
+   /* wavy Images */
+
+   .whiteHeaderImg{
+    object-fit: cover;
+     bottom: -24px;
+    height: 59px;
+  }
+   .wavyBottomImg{
+    object-fit: cover;
+    height: 50px;
+    bottom: -49px;
+   }
+   .wavyTopImg{
+    object-fit: cover;
+    top: -46px;
+    height: 48px;
+   }
+   .pinkTopWavyImg{
+    object-fit: cover;
+   }
+   .wavyTopImgVision{
+    object-fit: cover;
+    top: -100px;
+   }
+   .brownHeaderImg{
+    object-fit: cover;
+    height: 70px;
+    top: -28px;
+   }
+   .pinkBottomWavyImg{
+    top: -30px;
+    height: 48px;
+    object-fit: cover;
+   }
+
+}
+
+@media (max-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    
+    .navbar .nav-item:focus-within .dropdown-menu {
+        display: flex;
+        gap: 8px;
+        height: 67px;
+        padding: 5px;
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+    .dropdown-item{
+        padding: 4px 0px;
+    }
+}
