@@ -30,7 +30,7 @@ export default function TestimonialAndBelog() {
       {/* <!-- Testimonial Start --> */}
       <div className="container-fluid testimonial position-relative pb-3 mb-5">
         <img
-          src="src/assets/images/wave-040.png"
+          src="/images/wave-040.png"
           className="wavyTopImg"
           alt=""
         />
@@ -107,7 +107,7 @@ export default function TestimonialAndBelog() {
                 <div className="position-relative overflow-hidden rounded-top">
                   <img
                     className="img-fluid"
-                    src="src/assets/images/event-1.webp"
+                    src="/images/event-1.webp"
                     alt=""
                   />
                 </div>
@@ -132,7 +132,7 @@ export default function TestimonialAndBelog() {
                 <div className="position-relative overflow-hidden rounded-top">
                   <img
                     className="img-fluid"
-                    src="src/assets/images/event-3.webp"
+                    src="/images/event-3.webp"
                     alt=""
                   />
                 </div>
@@ -156,7 +156,7 @@ export default function TestimonialAndBelog() {
                 <div className="position-relative overflow-hidden rounded-top">
                   <img
                     className="img-fluid"
-                    src="src/assets/images/event-4.webp"
+                    src="/images/event-4.webp"
                     alt=""
                   />
                 </div>
@@ -178,7 +178,7 @@ export default function TestimonialAndBelog() {
           </div>
         </div>
         <img
-          src="src/assets/images/wave-40.png"
+          src="/images/wave-40.png"
           className="wavyBottomImg"
           alt=""
         />

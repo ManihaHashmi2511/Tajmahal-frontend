@@ -42,7 +42,7 @@ export default function About() {
       </div>
 
     </div>
-    <img src="src/assets/images/wave-40.png" class="wavyBottomImg" alt="" />
+    <img src="/images/wave-40.png" class="wavyBottomImg" alt="" />
   </div>
   {/* <!-- About End --> */}
 
@@ -63,34 +63,34 @@ export default function About() {
 
           <div class="brandImg" style={{width: '133px'}}>
             <Link to={'/besa-confectionary'}>
-              <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="src/assets/images/brand-5.webp" alt="" />
+              <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="/images/brand-5.webp" alt="" />
             </Link>
           </div>
 
 
           <div class="brandImg" style={{width: '145px'}}>
             <Link to={'/sweetTime-confectionary'}>
-               <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="src/assets/images/Sweetimes-logo.png" alt="" />
+               <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="/images/Sweetimes-logo.png" alt="" />
             </Link>
           </div>
 
 
           <div class="brandImg" style={{width: '145px'}}>
             <Link to={'/hlu-confectionary'}> 
-              <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="src/assets/images/brand-7.webp" alt="" />
+              <img class="img-fluid  wow fadeIn" data-wow-delay="0.1s" src="/images/brand-7.webp" alt="" />
             </Link>
           </div>
 
 
           <div class="brandImg" style={{width: '150px'}}>
             <Link to={'/tajmahal-confectionary'}>
-              <img class="img-fluid  wow fadeIn" data-wow-delay="0.2s" src="src/assets/images/brand-4.webp" alt="" />
+              <img class="img-fluid  wow fadeIn" data-wow-delay="0.2s" src="/images/brand-4.webp" alt="" />
             </Link>
           </div>
 
           <div class="brandImg" style={{width: '133px'}}>
             <Link to={'/tajmahal-tea'}>
-              <img class="img-fluid  wow fadeIn" data-wow-delay="0.2s" src="src/assets/images/tea-logo.webp" alt="" />
+              <img class="img-fluid  wow fadeIn" data-wow-delay="0.2s" src="/images/tea-logo.webp" alt="" />
             </Link>
           </div>
 

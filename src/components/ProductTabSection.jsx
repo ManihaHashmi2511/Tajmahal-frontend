@@ -135,7 +135,7 @@ export default function ProductTabSection({ brand, enablePagination = false }) {
     <>
       <div className="container-fluid event position-relative pt-5 pb-6">
         <img
-          src="src/assets/images/wave-040.png"
+          src="/images/wave-040.png"
           alt=""
           className="wavyTopImg"
         />
@@ -143,7 +143,7 @@ export default function ProductTabSection({ brand, enablePagination = false }) {
         <div className="container">
           <div className="text-center wow" data-wow-delay="0.1s">
             <img
-              src="src/assets/images/can-2.png"
+              src="/images/can-2.png"
               style={{ height: "96px", width: "140px" }}
             />
             <p className="fs-3 fw-bold crumText mt-2 fst-italic textPrimary">
@@ -167,7 +167,7 @@ export default function ProductTabSection({ brand, enablePagination = false }) {
                     <div className="service-img mx-auto">
                       <img
                         className="rounded-circle w-100 h-100 bg-light p-3"
-                        src={`src/assets/images/${tab.icon}`}
+                        src={`/images/${tab.icon}`}
                         alt={tab.label}
                       />
                     </div>
@@ -276,7 +276,7 @@ export default function ProductTabSection({ brand, enablePagination = false }) {
         </div>
 
         <img
-          src="src/assets/images/header-bg-2.png"
+          src="/images/header-bg-2.png"
           alt=""
           className="whiteHeaderImg"
         />

@@ -53,7 +53,7 @@ export default function Contact() {
 
     {/* <!-- Contact Start --> */}
     <div className="container-fluid contact position-relative pb-5 pt-2" style={{backgroundColor: "#8CE4FF"}}>
-        <img src="src/assets/images/header-bg-4.png" alt="" className="pinkTopWavyImg" />
+        <img src="/images/header-bg-4.png" alt="" className="pinkTopWavyImg" />
         <div className="container">
             <div className="section-title text-center mx-auto wow fadeInUp my-5" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
                 <p className="fs-3 fw-medium fst-italic crumText text-white">Contact Us</p>
@@ -127,7 +127,7 @@ export default function Contact() {
                 </div>
             </div>
         </div>
-        <img src="src/assets/images/header-bg-04.png" alt="" className="pinkBottomWavyImg2"  />
+        <img src="/images/header-bg-04.png" alt="" className="pinkBottomWavyImg2"  />
     </div>
     {/* <!-- Contact End --> */}
 

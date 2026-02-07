@@ -41,7 +41,7 @@ export default function Products() {
         style={{ backgroundColor: "#8CE4FF" }}
       >
         <img
-          src="src/assets/images/wave-19.png"
+          src="/images/wave-19.png"
           alt=""
           className="pinkTopWavyImg"
         />
@@ -74,7 +74,7 @@ export default function Products() {
                   <img
                     className="img-fluid  wow fadeIn"
                     data-wow-delay="0.1s"
-                    src="src/assets/images/brand-01.webp"
+                    src="/images/brand-01.webp"
                     alt=""
                   />
                 </Link>
@@ -92,7 +92,7 @@ export default function Products() {
                   <img
                     className="img-fluid mb-3 wow fadeIn"
                     data-wow-delay="0.2s"
-                    src="src/assets/images/brand-4.webp"
+                    src="/images/brand-4.webp"
                     alt=""
                   />
                 </Link>
@@ -110,7 +110,7 @@ export default function Products() {
                   <img
                     className="img-fluid  wow fadeIn"
                     data-wow-delay="0.1s"
-                    src="src/assets/images/brand-7.webp"
+                    src="/images/brand-7.webp"
                     alt=""
                   />
                 </Link>
@@ -127,7 +127,7 @@ export default function Products() {
                   <img
                     className="img-fluid mb-3  wow fadeIn"
                     data-wow-delay="0.1s"
-                    src="src/assets/images/Sweetimes-logo.png"
+                    src="/images/Sweetimes-logo.png"
                     alt=""
                   />
                 </Link>
@@ -144,7 +144,7 @@ export default function Products() {
                   <img
                     className="img-fluid mb-3  wow fadeIn"
                     data-wow-delay="0.1s"
-                    src="src/assets/images/tea-logo.webp"
+                    src="/images/tea-logo.webp"
                     alt=""
                   />
                 </Link>
@@ -172,7 +172,7 @@ export default function Products() {
               data-wow-delay="0.1s"
               style={{maxWidth: "600px"}}
             >
-              <img src="src/assets/images/can-9.png" style={{height: "102px", width: "70px"}} alt="" />
+              <img src="/images/can-9.png" style={{height: "102px", width: "70px"}} alt="" />
               <p className="fs-3 fw-bold  crumText fst-italic textPrimary mt-2">
                 Our Products
               </p>
@@ -188,7 +188,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/tajmahal-img/taj-chew (5).webp"
+                    src="/tajmahal-img/taj-chew (5).webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -214,7 +214,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/taj-besa/besa-choco-you&me.webp"
+                    src="/taj-besa/besa-choco-you&me.webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -240,7 +240,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/taj-besa/besa-lolly-coca.webp"
+                    src="/taj-besa/besa-lolly-coca.webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -268,7 +268,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/taj-besa/besa-candy-eclairs.webp"
+                    src="/taj-besa/besa-candy-eclairs.webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -294,7 +294,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/taj-sweetime/sweetimes-chew-jolly.webp"
+                    src="/taj-sweetime/sweetimes-chew-jolly.webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -320,7 +320,7 @@ export default function Products() {
                 <div className="store-item position-relative text-center">
                   <img
                     className="img-fluid"
-                    src="src/assets/taj-besa/besa-lolly-jetpop.webp"
+                    src="/taj-besa/besa-lolly-jetpop.webp"
                     alt=""
                   />
                   <div className="p-4">
@@ -343,7 +343,7 @@ export default function Products() {
           </div>
         </div>
         <img
-          src="src/assets/images/header-bg-3.png"
+          src="/images/header-bg-3.png"
           alt=""
           className="whiteHeaderImg"
         />

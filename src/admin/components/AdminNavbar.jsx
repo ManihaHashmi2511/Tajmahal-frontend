@@ -2,12 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { FaUser } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
-import logo from '../../assets/images/Tajmahal logo.png'
-import maleProfile1 from '../../../public/male4.jpg'
-import maleProfile2 from '../../../public/male3.jpg'
-import femaleProfile1 from '../../../public/female1.png'
-import femaleProfile2 from '../../../public/female2.png'
-import femaleProfile3 from '../../../public/female3.png'
+import logo from '../../../public/images/Tajmahal logo.png';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { img } from "framer-motion/client";
 import { CgProfile } from "react-icons/cg";

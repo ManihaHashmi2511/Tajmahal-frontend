@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from '../assets/images/Tajmahal logo.png';
+import logo from '../../public/images/Tajmahal logo.png';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
     <>
      <div className="sticky-top" style={{height: '10px'}}>
-    <img className="headerImg" src="src/assets/images/header-bg-04.png" alt="" />
+    <img className="headerImg" src="/images/header-bg-04.png" alt="" />
     <div className="navBar">
       <nav className="navbar   navbar-expand-lg bg-transparent navbar-light  py-lg-0">
         <Link to="/" className="navbar-brand mt-2 ">

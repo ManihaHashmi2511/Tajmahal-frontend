@@ -36,7 +36,7 @@ export default function Vision() {
 
       <div className="container-fluid aboutBg pb-5 pt-3  position-relative">
         <img
-          src="src/assets/images/wave-040.png"
+          src="/images/wave-040.png"
           alt=""
           className="wavyTopImgVision"
         />
@@ -69,7 +69,7 @@ export default function Vision() {
           </div>
         </div>
         <img
-          src="src/assets/images/header-bg-3.png"
+          src="/images/header-bg-3.png"
           alt=""
           className="whiteHeaderImg"
         />

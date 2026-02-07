@@ -28,7 +28,7 @@ export default function Mission() {
 
   {/* <!-- Article Start --> */}
   <div class="container-fluid pb-5 pt-3 aboutBg position-relative">
-    <img src="src/assets/images/wave-040.png" alt="" class="wavyTopImgVision" />
+    <img src="/images/wave-040.png" alt="" class="wavyTopImgVision" />
     <div class="container pb-3">
       <div class="row justify-content-center align-items-center">
         
@@ -44,7 +44,7 @@ export default function Mission() {
         </div>
       </div>
     </div>
-     <img src="src/assets/images/header-bg-3.png" alt="" class="whiteHeaderImg" />
+     <img src="/images/header-bg-3.png" alt="" class="whiteHeaderImg" />
   </div>
   {/* <!-- Article End --> */}
 

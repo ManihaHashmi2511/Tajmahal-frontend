@@ -19,7 +19,7 @@ export default function Home() {
           muted
           loop
           playsinline
-          poster="src/assets/images/banner-b1.jpg"
+          poster="/images/banner-b1.jpg"
           className="bg-video"
         >
           <source src="/video/0101.mp4" type="video/mp4" />
@@ -40,7 +40,7 @@ export default function Home() {
       {/* <!-- Article Start --> */}
       <div className="container-fluid py-5  position-relative certificate">
         <img
-          src="src/assets/images/header-bg-8.png"
+          src="/images/header-bg-8.png"
           className="brownHeaderImg"
           alt=""
         />
@@ -52,7 +52,7 @@ export default function Home() {
                 >
                   <img
                     className="img-fluid ceo-img"
-                    src="src/assets/images/ceo-img3.jpg"
+                    src="/images/ceo-img3.jpg"
                     alt=""
                   />
                 </a>
@@ -91,18 +91,18 @@ export default function Home() {
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className=" feature-img ">
                 <a
-                 href="src/assets/images/certificate tajmahal_food.jpg" target="_blank"
+                 href="/images/certificate tajmahal_food.jpg" target="_blank"
                 >
                   <img
                     className="img-fluid certificate-img"
-                    src="src/assets/images/certificate tajmahal_food.jpg"
+                    src="/images/certificate tajmahal_food.jpg"
                     alt=""
                   />
                 </a>
                 <a>
                   <img
                     className="img-fluid hilal-img"
-                    src="src/assets/images/(15).webp"
+                    src="/images/(15).webp"
                     alt=""
                   />
                 </a>
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
         </div>
         <img
-          src="src/assets/images/header-bg-2.png"
+          src="/images/header-bg-2.png"
           className="whiteHeaderImg"
           alt=""
         />

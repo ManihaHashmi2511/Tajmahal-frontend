@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoIosTime } from "react-icons/io";
 import { BiSolidContact } from 'react-icons/bi';
-import logo from '../assets/images/Tajmahal logo.png';
+import logo from '../../public/images/Tajmahal logo.png';
 
 
 export default function Footer() {
