@@ -378,7 +378,7 @@ body.no-scroll { overflow: hidden; }
 .navbar .dropdown-toggle::after {
   border: none;
   content: "";
-  background: url(./assets/images/chevron-down\ \(1\).webp);
+  background: url(../public/images/chevron-down\ \(1\).webp);
   background-position: center;
   width: 25px;
   height: 25px;
