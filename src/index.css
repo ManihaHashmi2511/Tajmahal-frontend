@@ -201,7 +201,7 @@ body.no-scroll { overflow: hidden; }
 /* About  */
 
 .aboutBg{
-    background:  url(../public/images/fav-Icon-overlay\(1\).jpg) center no-repeat ;
+    background:  url(../public/images/fav-Icon-overlay.jpg) center no-repeat ;
     background-size: contain;
     height: 100%;
     width: 100%;
