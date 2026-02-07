@@ -30,7 +30,7 @@ export default function Mission() {
   <div class="container-fluid pb-5 pt-3 aboutBg position-relative">
     <img src="/images/wave-040.png" alt="" class="wavyTopImgVision" />
     <div class="container pb-3">
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-center my-3">
         
         <div class="col-lg-12 py-3  section-title-div2 wow fadeIn text-center" data-wow-delay="0.5s" >
           <div class="section-title">

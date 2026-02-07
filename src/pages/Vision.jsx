@@ -41,7 +41,7 @@ export default function Vision() {
           className="wavyTopImgVision"
         />
         <div className="container pb-3">
-          <div className="row justify-content-center align-items-center">
+          <div className="row justify-content-center align-items-center my-3">
             <div
               className="col-lg-12   section-title-div2  text-center wow fadeIn"
               data-wow-delay="0.5s"
