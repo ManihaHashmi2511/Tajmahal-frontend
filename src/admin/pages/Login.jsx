@@ -43,7 +43,11 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <form className="login-card" onSubmit={handleLogin}>
+
+        <div className="login-image"></div>
+
+  <div className="login-form-section">
+    <form className="login-card" onSubmit={handleLogin}>
         <h2>Admin Login</h2>
 
         <input
@@ -64,6 +68,7 @@ const Login = () => {
 
         <button type="submit">Login</button>
       </form>
+  </div>
     </div>
   );
 };
