@@ -7,7 +7,7 @@ import Counter from "./Counter";
 
 const StatsCards = () => {
   const stats = [
-    { title: "Total Products", value: 16, icon:<AiOutlineProduct className="chartIcon" />},
+    { title: "Total Products", value: 113, icon:<AiOutlineProduct className="chartIcon" />},
     { title: "Total Brands", value: 4, icon: <LiaCertificateSolid className="chartIcon" />},
     { title: "New Products", value: 5, icon:<MdOutlineProductionQuantityLimits className="chartIcon" />},
     { title: "Out of Stock", value: 0, icon: <AiOutlineStock className="chartIcon" />},

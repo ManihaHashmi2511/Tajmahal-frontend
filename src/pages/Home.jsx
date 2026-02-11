@@ -15,10 +15,10 @@ export default function Home() {
         data-wow-delay="0.1s"
       >
         <video
-          autoplay
+          autoPlay
           muted
           loop
-          playsinline
+          playsInline
           poster="/images/banner-b1.jpg"
           className="bg-video"
         >

@@ -2,66 +2,74 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
-
 const ProductModal = ({ onClose, setProducts, editProduct, fetchStats }) => {
   const [title, setTitle] = useState("");
   const [brand, setBrand] = useState("");
   const [type, setType] = useState("");
   const [image, setImage] = useState(null);
+  const [existingImage, setExistingImage] = useState("");
 
   // 🔹 If edit, prefill fields
   useEffect(() => {
     if (editProduct) {
-      setTitle(editProduct.title);
-      setBrand(editProduct.brand);
-      setType(editProduct.type);
+      setTitle(editProduct.title || "");
+      setBrand(editProduct.brand || "");
+      setType(editProduct.type || "");
+      setExistingImage(editProduct.imageUrl || "");
+      setImage(null); // reset file input
+    } else {
+      setTitle("");
+      setBrand("");
+      setType("");
+      setExistingImage("");
+      setImage(null);
     }
   }, [editProduct]);
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const formData = new FormData();
-    formData.append("title", title);
-    formData.append("brand", brand);
-    formData.append("type", type);
+    try {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("brand", brand);
+      formData.append("type", type);
 
-    if (image) {
-      formData.append("image", image);
+      if (image) {
+        formData.append("image", image);
+      }
+
+      let res;
+
+      if (editProduct) {
+        res = await axios.put(
+          `${import.meta.env.VITE_API_BASE_URL}/api/products/${editProduct._id}`,
+          formData
+        );
+        Swal.fire("Updated", "Product updated successfully", "success");
+
+        setProducts((prev) =>
+          prev.map((p) =>
+            p._id === editProduct._id ? res.data.product : p
+          )
+        );
+      } else {
+        res = await axios.post(
+          `${import.meta.env.VITE_API_BASE_URL}/api/products`,
+          formData
+        );
+        Swal.fire("Added", "Product added successfully", "success");
+
+        setProducts((prev) => [res.data.product, ...prev]);
+      }
+
+      await fetchStats();
+      onClose();
+    } catch (error) {
+      console.error("SUBMIT ERROR:", error);
+      Swal.fire("Error", "Failed to save product", "error");
     }
-
-    let res;
-
-    if (editProduct) {
-      res = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URL}/api/products/${editProduct._id}`,
-        formData
-      );
-
-      setProducts((prev) =>
-        prev.map((p) =>
-          p._id === editProduct._id ? res.data.product : p
-        )
-      );
-    } else {
-      res = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/api/products`,
-        formData
-      );
-
-      setProducts((prev) => [res.data.product, ...prev]);
-    }
-
-    // 🔥 THIS is the magic
-    await fetchStats();
-
-    onClose();
-  } catch (error) {
-    console.error("SUBMIT ERROR:", error);
-  }
-};
-
+  };
 
   return (
     <div
@@ -76,7 +84,7 @@ const ProductModal = ({ onClose, setProducts, editProduct, fetchStats }) => {
 
           <form onSubmit={handleSubmit}>
             <input
-              className="form-control mb-3 custom-input" 
+              className="form-control mb-3 custom-input"
               placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -113,6 +121,24 @@ const ProductModal = ({ onClose, setProducts, editProduct, fetchStats }) => {
               <option>Chews & Toffees</option>
               <option>Others</option>
             </select>
+
+            {/* ✅ Show existing image when editing */}
+            {editProduct && existingImage && (
+              <div className="mb-3">
+                <p className="mb-1 text-muted">Current Image</p>
+                <img
+                  src={existingImage}
+                  alt="Current"
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    objectFit: "contain",
+                    borderRadius: "8px",
+                    border: "1px solid #ddd",
+                  }}
+                />
+              </div>
+            )}
 
             <input
               type="file"

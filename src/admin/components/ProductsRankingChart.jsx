@@ -8,17 +8,19 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const data = [
-  { product: "All Products", sales: 34 },
-  { product: "Toffees", sales: 34 },
-  { product: "Chews", sales: 22 },
-  { product: "Bubble Gums", sales: 17 },
-  { product: "Lollipops", sales: 12 },
-  { product: "Candies", sales: 9 },
-  { product: "Chocolates", sales: 8 },
-];
+const ProductsRankingChart = ({ data }) => {
+  console.log("BAR CHART DATA 👉", data);
 
-const ProductsRankingChart = () => {
+  if (!Array.isArray(data) || data.length === 0) {
+    return (
+      <div className="chart-card animate-chart">
+        <h5 className="chart-title admin-title">Top Products Ranking</h5>
+        <p className="text-center mt-5">No product Found</p>
+      </div>
+    );
+  }
+
+
   return (
     <div className="chart-card animate-chart">
       <h5 className="chart-title admin-title">Top Products Ranking</h5>
@@ -26,16 +28,10 @@ const ProductsRankingChart = () => {
       <ResponsiveContainer width="100%" height={320}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
-          <XAxis dataKey="product" />
+          <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-
-          <Bar
-            barSize={70}
-            dataKey="sales"
-            fill="#4acdf8"
-            animationDuration={1300}
-          />
+          <Bar barSize={50} dataKey="count" fill="#4acdf8" animationDuration={1300} />
         </BarChart>
       </ResponsiveContainer>
     </div>

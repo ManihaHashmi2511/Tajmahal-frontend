@@ -66,9 +66,9 @@ const AdminNavbar = ({
       {/* RIGHT SIDE */}
       <div className="admin-nav-actions ">
 
-        <h5 className="mb-0 admin-title fs-4 text-muted">
+        <span className="mb-0 admin-title fs-5 text-muted">
         Pages / <span className="text-dark">{pageTitle}</span>
-        </h5>
+        </span>
         {/* 🔍 Search */}
         {/* <div
           className="inputDiv"
@@ -155,7 +155,7 @@ const AdminNavbar = ({
         </span> */}
          {/* 🍔 / ❌ Mobile Toggle Button */}
           <button className="mobile-menu-btn" onClick={toggleSidebar}>
-            {isSidebarOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+           <HiOutlineMenu className={`fs-5 ${isSidebarOpen ? "d-none" : ""}`} />
           </button>
       </div>
     </header>

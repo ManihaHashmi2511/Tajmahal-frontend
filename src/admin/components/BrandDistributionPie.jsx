@@ -6,21 +6,23 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-const data = [
-  { name: "Tajmahal", value: 34 },
-  { name: "Sweet Times", value: 39 },
-  { name: "Besa", value: 54 },
-  { name: "Hlu's", value: 12 }
-];
+const COLORS = ["#facc15", "#fc5257", "#E3322C", "#78160C"];
 
-const COLORS = ["#E3322C", "#fc5257", "#facc15", "#78160C"];
+const BrandDistributionPie = ({ data }) => {
+  if (!data || data.length === 0) {
+    return (
+      <div className="chart-card animate-chart">
+        <h5 className="chart-title admin-title">Brand Distribution</h5>
+        <p className="text-center mt-5">No product Found</p>
+      </div>
+    );
+  }
 
-const BrandDistributionPie = () => {
   return (
     <div className="chart-card animate-chart">
       <h5 className="chart-title admin-title">Brand Distribution</h5>
 
-      <ResponsiveContainer width="100%" height={320}>
+      <ResponsiveContainer width="100%" height={250} style={{ position: 'relative', top: '-15px'}}>
         <PieChart>
           <Pie
             data={data}
@@ -28,10 +30,11 @@ const BrandDistributionPie = () => {
             outerRadius={100}
             paddingAngle={4}
             dataKey="value"
+            nameKey="brand"
             animationDuration={1200}
           >
             {data.map((_, index) => (
-              <Cell key={index} fill={COLORS[index]} />
+              <Cell key={index} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
           <Tooltip />
@@ -43,9 +46,9 @@ const BrandDistributionPie = () => {
           <div key={i} className="legend-item">
             <span
               className="legend-color"
-              style={{ background: COLORS[i] }}
+              style={{ background: COLORS[i % COLORS.length] }}
             ></span>
-            {item.name}
+            {item.brand}
           </div>
         ))}
       </div>

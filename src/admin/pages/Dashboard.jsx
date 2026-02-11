@@ -22,43 +22,57 @@ const Dashboard = () => {
   const [search, setSearch] = useState("");
   const [brandFilter, setBrandFilter] = useState("all");
 
-  // 🔹 NEW: chart data states
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 5;
+
   const [brandStats, setBrandStats] = useState([]);
   const [rankingStats, setRankingStats] = useState([]);
 
+  const fetchStats = async () => {
+    try {
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/api/products/stats`,
+      );
+      setBrandStats(res.data.brandChart || []);
+
+      const allowedTypes = [
+        "Candies",
+        "Toffees",
+        "Chocolates",
+        "Bubble Gums",
+        "Chews",
+        "Lollipops",
+      ];
+
+      const filteredRanking = (res.data.typeChart || []).filter((item) =>
+        allowedTypes.includes(item.name),
+      );
+
+      setRankingStats(filteredRanking);
+    } catch (err) {
+      console.error("Stats error:", err);
+    }
+  };
+
   useEffect(() => {
-    fetchProducts();
     fetchStats();
+    fetchProducts();
   }, []);
 
-  // 🔹 Fetch products
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, brandFilter]);
+
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products`);
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/api/products`,
+      );
       setProducts(res.data.products || res.data);
     } catch (err) {
       console.error(err);
     } finally {
       setLoading(false);
-    }
-  };
-
-  const filteredProducts = products.filter(
-    (product) =>
-      product.title.toLowerCase().includes(search.toLowerCase()) ||
-      product.brand?.toLowerCase().includes(search.toLowerCase()) ||
-      product.type?.toLowerCase().includes(search.toLowerCase()),
-  );
-
-  // 🔹 Fetch dashboard stats (charts)
-  const fetchStats = async () => {
-    try {
-      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products/stats`);
-
-      setBrandStats(res.data.brandChart);
-      setRankingStats(res.data.rankingChart);
-    } catch (err) {
-      console.error("Stats error:", err);
     }
   };
 
@@ -73,16 +87,14 @@ const Dashboard = () => {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/products/${id}`);
-
+        await axios.delete(
+          `${import.meta.env.VITE_API_BASE_URL}/api/products/${id}`,
+        );
         setProducts((prev) => prev.filter((p) => p._id !== id));
-        fetchStats(); // 🔥 refresh charts
-
+        fetchStats();
         Swal.fire("Deleted!", "Product has been deleted.", "success");
       }
     });
@@ -92,37 +104,59 @@ const Dashboard = () => {
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     .slice(0, 5);
 
-  const brandFilteredProducts = products.filter((product) => {
+  const filteredProducts = products.filter((product) => {
     const matchesSearch = product.title
       ?.toLowerCase()
       .includes(search.toLowerCase());
-
     const matchesBrand = brandFilter === "all" || product.brand === brandFilter;
-
     return matchesSearch && matchesBrand;
   });
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+
+  const paginatedProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct,
+  );
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  // 🔥 SMART PAGINATION LOGIC
+  const getPaginationNumbers = () => {
+    const pages = [];
+    const delta = 1;
+
+    pages.push(1);
+
+    let left = currentPage - delta;
+    let right = currentPage + delta;
+
+    if (left > 2) pages.push("...");
+    for (let i = Math.max(2, left); i <= Math.min(totalPages - 1, right); i++) {
+      pages.push(i);
+    }
+
+    if (right < totalPages - 1) pages.push("...");
+    if (totalPages > 1) pages.push(totalPages);
+
+    return pages;
+  };
 
   return (
     <div className="admin-layout">
       <main className="admin-main">
         <div className="admin-content">
-          <div className="row mt-5 px-2">
-            <div className="col-lg-12">
+          <div className="row mt-5">
+            <div className="col-lg-12 d-flex flex-column gap-4">
               <StatsCards products={products} loading={loading} />
             </div>
           </div>
-
-          <div className="row mb-4 px-2">
-            <div className="col-lg-7">
-              <ProductVisitorsChart />
-            </div>
-            <div className="col-lg-5">
+          <div className="row px-2">
+            <div className="col-lg-4">
               <BrandDistributionPie data={brandStats} />
             </div>
-          </div>
-
-          <div className="row my-4 px-2">
-            <div className="col-lg-12">
+            <div className="col-lg-8">
               <ProductsRankingChart data={rankingStats} />
             </div>
           </div>
@@ -133,16 +167,13 @@ const Dashboard = () => {
             loading={loading}
           />
 
-          {/* Products Header */}
-          {/* Products Header */}
-          <div className="d-flex justify-content-between bg-white mt-5 p-3 rounded mb-2">
+          <div className="container">
+            <div className="d-flex justify-content-between bg-white mt-5 p-3 rounded mb-2">
             <h4 className="admin-title">Products</h4>
 
-            <div className="d-flex gap-3 align-items-center">
-              {/* Brand Filter */}
+            <div className="d-flex gap-3  align-items-center">
               <select
-                className="form-select"
-                style={{ width: "180px" }}
+                className="form-select product-select"
                 value={brandFilter}
                 onChange={(e) => setBrandFilter(e.target.value)}
               >
@@ -153,7 +184,6 @@ const Dashboard = () => {
                 <option value="Hlu's">Hlu's</option>
               </select>
 
-              {/* Search */}
               <div className="search-pill product-input">
                 <input
                   type="search"
@@ -164,9 +194,8 @@ const Dashboard = () => {
                 <IoSearchOutline />
               </div>
 
-              {/* Add Button */}
               <button
-                className="btn btn-primary"
+                className="btn btn-primary "
                 onClick={() => {
                   setEditProduct(null);
                   setShowModal(true);
@@ -177,12 +206,36 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <ProductTable
-            products={brandFilteredProducts}
+          <ProductTable 
+            products={paginatedProducts}
             search={search}
             onEdit={handleEdit}
             onDelete={handleDelete}
           />
+
+          {/* 🔥 SMART PAGINATION UI */}
+          <div className="d-flex justify-content-center my-4">
+            <div className="pagination">
+              {getPaginationNumbers().map((page, i) =>
+                page === "..." ? (
+                  <span key={i} className="page-dots">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentPage(page)}
+                    className={`page-btn ${
+                      currentPage === page ? "active" : ""
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ),
+              )}
+            </div>
+          </div>
+          </div>
         </div>
 
         {showModal && (
@@ -191,7 +244,7 @@ const Dashboard = () => {
             setProducts={setProducts}
             editProduct={editProduct}
             fetchProducts={fetchProducts}
-            fetchStats={fetchStats} // 🔥 IMPORTANT
+            fetchStats={fetchStats}
           />
         )}
       </main>

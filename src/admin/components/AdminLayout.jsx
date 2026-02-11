@@ -13,7 +13,7 @@ const toggleSidebar = () => {
 
   return (
     <div className="admin-wrapper">
-      <Sidebar isOpen={isSidebarOpen} />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
       <div className={`main-content ${isSidebarOpen ? "" : "full"}`}>
         <AdminNavbar   

@@ -13,7 +13,8 @@ import AdminProducts from "./admin/pages/AdminProducts";
 import AdminLayout from "./admin/components/AdminLayout";
 import AdminTable from "./admin/pages/AdminTable";
 import Tea from "./pages/Tea";
-
+import Login from "./admin/pages/Login";
+import ProtectedRoute from "./admin/components/ProtectedRoute";
 
 function App() {
   return (
@@ -32,11 +33,20 @@ function App() {
         <Route path="/sweetTime-confectionary" element={<SweetTime />} />
         <Route path="/tajmahal-tea" element={<Tea />} />
 
-         {/* ADMIN ROUTES */}
-         <Route path="/admin/Dashboard" element={<AdminLayout />} />
-          {/* <Route index element={<Dashboard />} /> */}
-          <Route path="/admin/Products" element={<AdminProducts />} />
-          <Route path="/admin/Table" element={<AdminTable />} />
+        {/* ADMIN ROUTES */}
+        <Route path="/admin/login" element={<Login />} />
+
+        <Route
+          path="/admin/Dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        />
+        {/* <Route index element={<Dashboard />} /> */}
+        <Route path="/admin/Products" element={<AdminProducts />} />
+        <Route path="/admin/Table" element={<AdminTable />} />
       </Routes>
     </BrowserRouter>
   );

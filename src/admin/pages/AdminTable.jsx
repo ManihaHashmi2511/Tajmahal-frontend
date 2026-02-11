@@ -15,6 +15,9 @@ export default function AdminTable() {
   const [editProduct, setEditProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [brandFilter, setBrandFilter] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 5;
 
   // 🔹 Search
   const [search, setSearch] = useState("");
@@ -29,9 +32,15 @@ export default function AdminTable() {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, brandFilter]);
+
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products`);
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/api/products`,
+      );
       setProducts(res.data.products || res.data);
     } catch (err) {
       console.error("Fetch products error", err);
@@ -67,6 +76,46 @@ export default function AdminTable() {
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
+
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch = product.title
+      ?.toLowerCase()
+      .includes(search.toLowerCase());
+    const matchesBrand = brandFilter === "all" || product.brand === brandFilter;
+    return matchesSearch && matchesBrand;
+  });
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+
+  const paginatedProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct,
+  );
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  // 🔥 SMART PAGINATION LOGIC
+  const getPaginationNumbers = () => {
+    const pages = [];
+    const delta = 1;
+
+    pages.push(1);
+
+    let left = currentPage - delta;
+    let right = currentPage + delta;
+
+    if (left > 2) pages.push("...");
+    for (let i = Math.max(2, left); i <= Math.min(totalPages - 1, right); i++) {
+      pages.push(i);
+    }
+
+    if (right < totalPages - 1) pages.push("...");
+    if (totalPages > 1) pages.push(totalPages);
+
+    return pages;
+  };
+
   const recentProducts = [...products]
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     .slice(0, 5);
@@ -81,24 +130,36 @@ export default function AdminTable() {
           <div className={`main-content ${isSidebarOpen ? "" : "full"}`}>
             <AdminNavbar
               search={search}
-              setSearch={setSearch}
+              products={filteredProducts}
               toggleSidebar={toggleSidebar}
               isSidebarOpen={isSidebarOpen}
             />
             <div className="remain admin-content">
-              <div className="container-fluid mt-5 ">
-                <div className="container my-5">
+              <div className="container-fluid my-5 ">
+                <div className="conatiner my-5">
                   <RecentProducts
                     title="Recent Products"
                     products={recentProducts}
                     loading={loading}
                   />
                 </div>
-                <div className="container">
-                  <div className="d-flex justify-content-between bg-white p-3 rounded mb-3">
+                <div className="container my-5">
+                  <div className="d-flex justify-content-between bg-white mt-5 p-3 rounded mb-2">
                     <h4 className="admin-title">Products</h4>
 
-                    <div className="d-flex gap-3">
+                    <div className="d-flex gap-3 align-items-center">
+                      <select
+                        className="form-select product-select"
+                        value={brandFilter}
+                        onChange={(e) => setBrandFilter(e.target.value)}
+                      >
+                        <option value="all">All Brands</option>
+                        <option value="Tajmahal">Tajmahal</option>
+                        <option value="Sweet Times">Sweet Times</option>
+                        <option value="Besa">Besa</option>
+                        <option value="Hlu's">Hlu's</option>
+                      </select>
+
                       <div className="search-pill product-input">
                         <input
                           type="search"
@@ -122,12 +183,34 @@ export default function AdminTable() {
                   </div>
 
                   <ProductTable
-                    products={products}
+                    products={paginatedProducts}
                     search={search}
                     onEdit={handleEdit}
                     onDelete={handleDelete}
                   />
 
+                  {/* 🔥 SMART PAGINATION UI */}
+                  <div className="d-flex justify-content-center my-4">
+                    <div className="pagination">
+                      {getPaginationNumbers().map((page, i) =>
+                        page === "..." ? (
+                          <span key={i} className="page-dots">
+                            ...
+                          </span>
+                        ) : (
+                          <button
+                            key={i}
+                            onClick={() => setCurrentPage(page)}
+                            className={`page-btn ${
+                              currentPage === page ? "active" : ""
+                            }`}
+                          >
+                            {page}
+                          </button>
+                        ),
+                      )}
+                    </div>
+                  </div>
                   {showModal && (
                     <ProductModal
                       onClose={() => setShowModal(false)}
