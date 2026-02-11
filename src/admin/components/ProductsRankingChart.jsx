@@ -9,8 +9,6 @@ import {
 } from "recharts";
 
 const ProductsRankingChart = ({ data }) => {
-  console.log("BAR CHART DATA 👉", data);
-
   if (!Array.isArray(data) || data.length === 0) {
     return (
       <div className="chart-card animate-chart">
