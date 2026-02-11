@@ -1,10 +1,4 @@
-import {
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-  ResponsiveContainer
-} from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const COLORS = ["#facc15", "#fc5257", "#E3322C", "#78160C"];
 
@@ -22,7 +16,11 @@ const BrandDistributionPie = ({ data }) => {
     <div className="chart-card animate-chart">
       <h5 className="chart-title admin-title">Brand Distribution</h5>
 
-      <ResponsiveContainer width="100%" height={250} style={{ position: 'relative', top: '-15px'}}>
+      <ResponsiveContainer
+        width="100%"
+        height={250}
+        style={{ position: "relative", top: "-15px" }}
+      >
         <PieChart>
           <Pie
             data={data}
@@ -47,8 +45,8 @@ const BrandDistributionPie = ({ data }) => {
             <span
               className="legend-color"
               style={{ background: COLORS[i % COLORS.length] }}
-            ></span>
-            {item.brand}
+            />
+            {item.name}
           </div>
         ))}
       </div>

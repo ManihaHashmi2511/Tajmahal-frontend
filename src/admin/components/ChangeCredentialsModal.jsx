@@ -67,26 +67,33 @@ const ChangeCredentialsModal = ({ onClose }) => {
         {step === 1 ? (
           <div className="login-container2">
             <div className="login-card2">
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between mb-3">
                 <h4>Verify Current Credentials</h4>
                 <span>
-                  <IoMdClose className="fs-4" onClick={onClose} />
+                  <IoMdClose className="fs-4" style={{cursor:'pointer'}} onClick={onClose} />
                 </span>
               </div>
-              <input
-                placeholder="Current Email"
-                value={oldEmail}
-                onChange={(e) => setOldEmail(e.target.value)}
-              />
 
-              <input
-                type="password"
-                placeholder="Current Password"
-                value={oldPassword}
-                onChange={(e) => setOldPassword(e.target.value)}
-              />
+              <div className="d-flex flex-column gap-1 mb-2">
+                <label className="fs-6 fw-medium">Current Email</label>
+                <input
+                  placeholder="Enter Email"
+                  value={oldEmail}
+                  onChange={(e) => setOldEmail(e.target.value)}
+                />
+              </div>
 
-              <button className="next-button" onClick={verifyOld}>
+              <div className="d-flex flex-column gap-1 mb-2">
+                <label className="fs-6 fw-medium">Current Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  value={oldPassword}
+                  onChange={(e) => setOldPassword(e.target.value)}
+                />
+              </div>
+
+              <button className="next-button mt-2" onClick={verifyOld}>
                 Next
               </button>
             </div>
@@ -94,9 +101,9 @@ const ChangeCredentialsModal = ({ onClose }) => {
         ) : (
           <div className="login-container2">
             <div className="login-card2">
-              <div className="d-flex justify-content-between ">
+              <div className="d-flex justify-content-between mb-4">
                 <span>
-                  <IoArrowBack className="fs-4" onClick={() => setStep(1)} />
+                  <IoArrowBack className="fs-4" style={{cursor:'pointer'}} onClick={() => setStep(1)} />
                 </span>
                 <h4>Update Credentials</h4>
               </div>
@@ -109,16 +116,15 @@ const ChangeCredentialsModal = ({ onClose }) => {
                   onChange={(e) => setNewEmail(e.target.value)}
                 />
               </div>
-                <div className="d-flex flex-column gap-1 mb-2">
+              <div className="d-flex flex-column gap-1 mb-2">
                 <label className="fs-6 fw-medium">New Password</label>
                 <input
-                type="password"
-                placeholder="New Password"
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-              />
-
-                </div>
+                  type="password"
+                  placeholder="New Password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+              </div>
               <button className="next-button" onClick={updateCredentials}>
                 Confirm
               </button>

@@ -28,31 +28,53 @@ const Dashboard = () => {
   const [brandStats, setBrandStats] = useState([]);
   const [rankingStats, setRankingStats] = useState([]);
 
-  const fetchStats = async () => {
-    try {
-      const res = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/api/products/stats`,
-      );
-      setBrandStats(res.data.brandChart || []);
 
-      const allowedTypes = [
-        "Candies",
-        "Toffees",
-        "Chocolates",
-        "Bubble Gums",
-        "Chews",
-        "Lollipops",
-      ];
+const fetchStats = async () => {
+  try {
+    const res = await axios.get(
+      `${import.meta.env.VITE_API_BASE_URL}/api/products/stats`
+    );
 
-      const filteredRanking = (res.data.typeChart || []).filter((item) =>
-        allowedTypes.includes(item.name),
-      );
+    setBrandStats(res.data.brandChart || []);
 
-      setRankingStats(filteredRanking);
-    } catch (err) {
-      console.error("Stats error:", err);
+    // 🔥 FRONTEND GROUPING (NO BACKEND CHANGE)
+    const grouped = {};
+
+    res.data.rankingChart.forEach((item) => {
+      // item.name is product title, so we must infer type from products list instead
+      // So better approach: use products array you already have
+    });
+
+  } catch (err) {
+    console.error("Stats error:", err);
+  }
+};
+useEffect(() => {
+  const ALLOWED_TYPES = [
+    "Candies",
+    "Toffees",
+    "Bubble Gums",
+    "Chocolates",
+    "Lollipops",
+    "Chews",
+  ];
+
+  const typeMap = {};
+
+  products.forEach((p) => {
+    if (ALLOWED_TYPES.includes(p.type)) {
+      typeMap[p.type] = (typeMap[p.type] || 0) + 1;
     }
-  };
+  });
+
+  const finalData = Object.keys(typeMap).map((type) => ({
+    name: type,
+    count: typeMap[type],
+  }));
+
+  setRankingStats(finalData);
+}, [products]);
+
 
   useEffect(() => {
     fetchStats();
