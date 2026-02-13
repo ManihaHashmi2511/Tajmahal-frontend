@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
-const ProductModal = ({ onClose, setProducts, editProduct, fetchStats }) => {
+const ProductModal = ({ onClose, setProducts, editProduct }) => {
   const [title, setTitle] = useState("");
   const [brand, setBrand] = useState("");
   const [type, setType] = useState("");
@@ -63,7 +63,7 @@ const ProductModal = ({ onClose, setProducts, editProduct, fetchStats }) => {
         setProducts((prev) => [res.data.product, ...prev]);
       }
 
-      await fetchStats();
+      
       onClose();
     } catch (error) {
       console.error("SUBMIT ERROR:", error);
