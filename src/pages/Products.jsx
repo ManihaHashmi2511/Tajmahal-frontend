@@ -16,7 +16,7 @@ export default function Products() {
         <div className="container text-center pt-5">
           <div className="bannerHeadingImg"></div>
           <h1 className="display-4 crumText fst-italic  about-text mb-4 animated slideInDown">
-            Products
+            Our Products
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
@@ -27,7 +27,7 @@ export default function Products() {
                 Products
               </li>
               <li className="breadcrumb-item textPrimary" aria-current="page">
-                <Link to="/products">Our Confectionery</Link>
+                <Link to="/products">Our Confectionary</Link>
               </li>
             </ol>
           </nav>
@@ -40,11 +40,7 @@ export default function Products() {
         className="container-fluid  position-relative py-5"
         style={{ backgroundColor: "#8CE4FF" }}
       >
-        <img
-          src="/images/wave-19.png"
-          alt=""
-          className="pinkTopWavyImg"
-        />
+        <img src="/images/wave-19.png" alt="" className="pinkTopWavyImg" />
 
         <div className="container pb-4">
           <div
@@ -163,16 +159,20 @@ export default function Products() {
       {/* <!-- Store Start --> */}
       <div
         className="container-fluid products position-relative pb-5 "
-        style={{paddingTop: "100px"}}
+        style={{ paddingTop: "100px" }}
       >
         <div className="container-xxl py-3 ">
           <div className="container">
             <div
               className="section-title text-center mx-auto wow fadeInUp"
               data-wow-delay="0.1s"
-              style={{maxWidth: "600px"}}
+              style={{ maxWidth: "600px" }}
             >
-              <img src="/images/can-9.png" style={{height: "102px", width: "70px"}} alt="" />
+              <img
+                src="/images/can-9.png"
+                style={{ height: "102px", width: "70px" }}
+                alt=""
+              />
               <p className="fs-3 fw-bold  crumText fst-italic textPrimary mt-2">
                 Our Products
               </p>
@@ -342,11 +342,7 @@ export default function Products() {
             </div>
           </div>
         </div>
-        <img
-          src="/images/header-bg-3.png"
-          alt=""
-          className="whiteHeaderImg"
-        />
+        <img src="/images/header-bg-3.png" alt="" className="whiteHeaderImg" />
       </div>
       {/* <!-- Store End --> */}
 

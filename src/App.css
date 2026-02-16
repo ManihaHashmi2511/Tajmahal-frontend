@@ -99,7 +99,7 @@
   .hilal-img{
     width: 225px; 
     height: 225px;
-    margin-left: 20px;
+    margin-bottom: 25px;
   }
   .certificate{
     text-align: center;
@@ -107,7 +107,7 @@
   .feature-img {
     position: relative;
     margin: 0;
-    
+    display: inline-block;
 }
 .stick-img1{
     height: 618px;
@@ -330,7 +330,7 @@
   .hilal-img{
     width: 225px; 
     height: 225px;
-    margin-left: 20px;
+    margin-bottom: 25px;
   }
   .certificate{
     text-align: center;
@@ -338,6 +338,7 @@
   .feature-img {
     position: relative;
     margin: 0 !important;
+    display: inline-block;
 }
 .stick-img1{
     height: 618px;
@@ -553,14 +554,16 @@
   .hilal-img{
     width: 260px; 
     height: 260px;
-    margin-left: 20px;
+    margin-bottom: 25px;
   }
   .certificate{
     text-align: center;
   }
+  
   .feature-img {
     position: relative;
     margin: 0 !important;
+    display: inline-block;
 }
 .ceo-img{
     width: 300px;
@@ -867,9 +870,8 @@
     
     .navbar .nav-item:focus-within .dropdown-menu {
         display: flex;
-        gap: 8px;
-        height: 67px;
-        padding: 5px;
+        justify-content: flex-start;
+        padding: 16px 6px 16px 0px;
         top: 100%;
         visibility: visible;
         transition: .5s;

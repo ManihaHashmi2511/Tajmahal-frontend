@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "./About";
@@ -6,6 +6,14 @@ import Process from "./Process";
 import TestimonialAndBelog from "./TestimonialAndBelog";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+  const [activeImg, setActiveImg] = useState("");
+
+  const openModal = (img) => {
+    setActiveImg(img);
+    setOpen(true);
+  };
+
   return (
     <>
       <Header />
@@ -39,17 +47,15 @@ export default function Home() {
 
       {/* <!-- Article Start --> */}
       <div className="container-fluid py-5  position-relative certificate">
-        <img
-          src="/images/header-bg-8.png"
-          className="brownHeaderImg"
-          alt=""
-        />
+        <img src="/images/header-bg-8.png" className="brownHeaderImg" alt="" />
         <div className="container pt-5 pb-3">
           <div className="row g-5 justify-content-between">
-            <div className="col-lg-4 order-last wow  fadeIn" data-wow-delay="0.1s">
+            <div
+              className="col-lg-4 order-last wow  fadeIn"
+              data-wow-delay="0.1s"
+            >
               <div className=" feature-img d-flex justify-content-center flex-column align-items-center">
-                <a
-                >
+                <a>
                   <img
                     className="img-fluid ceo-img"
                     src="/images/ceo-img3.jpg"
@@ -87,28 +93,48 @@ export default function Home() {
           </div>
         </div>
         <div className="container pt-5">
-          <div className="row g-5">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-              <div className=" feature-img ">
-                <a
-                 href="/images/certificate tajmahal_food.jpg" target="_blank"
-                >
-                  <img
-                    className="img-fluid certificate-img"
-                    src="/images/certificate tajmahal_food.jpg"
-                    alt=""
-                  />
-                </a>
-                <a>
-                  <img
-                    className="img-fluid hilal-img"
-                    src="/images/(15).webp"
-                    alt=""
-                  />
-                </a>
+          <div className="row g-5 justify-content-center align-items-center my-lg-2">
+            <div className="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+              <div className="feature-img">
+                <img
+                  src="/images/certificate tajmahal_food.jpg"
+                  className="img-fluid certificate-img"
+                  alt="Certificate"
+                  onClick={() =>
+                    openModal("/images/certificate tajmahal_food.jpg")
+                  }
+                />
+
+                <img
+                  src="/images/(15).webp"
+                  className="img-fluid hilal-img"
+                  alt="Hilal"
+                  onClick={() => openModal("/images/(15).webp")}
+                />
+
+                <img
+                  src="/images/certificate_img_2.webp"
+                  className="img-fluid certificate-img2"
+                  alt="Third"
+                  onClick={() => openModal("/images/certificate_img_2.webp")}
+                />
               </div>
+
+              {open && (
+                <div className="modal-overlay" onClick={() => setOpen(false)}>
+                  <img
+                    src={activeImg}
+                    className="modal-img"
+                    alt="Large View"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              )}
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div
+              className="col-lg-10  order-first text-center wow fadeIn"
+              data-wow-delay="0.5s"
+            >
               <div className="section-title">
                 <p className="fs-2 fw-bold  crumText fst-italic textPrimary">
                   Certificate
@@ -131,11 +157,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <img
-          src="/images/header-bg-2.png"
-          className="whiteHeaderImg"
-          alt=""
-        />
+        <img src="/images/header-bg-2.png" className="whiteHeaderImg" alt="" />
       </div>
       {/* <!-- Article End --> */}
 
