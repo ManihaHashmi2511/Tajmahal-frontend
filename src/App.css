@@ -207,6 +207,11 @@
     height: 48px;
     object-fit: cover;
    }
+   .pinkBottomWavyImg2{
+    top: -30px;
+    height: 53px;
+    object-fit: cover;
+   }
 }
 
 
@@ -438,6 +443,11 @@
     height: 48px;
     object-fit: cover;
    }
+   .pinkBottomWavyImg2{
+    top: -30px;
+    height: 53px;
+    object-fit: cover;
+   }
 }
 
 /* @media (min-width: 992px) {
@@ -662,6 +672,11 @@
     height: 48px;
     object-fit: cover;
    }
+   .pinkBottomWavyImg2{
+    top: -30px;
+    height: 53px;
+    object-fit: cover;
+   }
 
 }
 
@@ -851,6 +866,11 @@
    .pinkBottomWavyImg{
     top: -30px;
     height: 48px;
+    object-fit: cover;
+   }
+   .pinkBottomWavyImg2{
+    top: -30px;
+    height: 53px;
     object-fit: cover;
    }
 
