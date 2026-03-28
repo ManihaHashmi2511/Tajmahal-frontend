@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         </div>
         <nav className="admin-nav">
           <NavLink
-            to="/admin"
+            to="/admin/dashboard"
             end
             className={({ isActive }) =>
               `d-flex gap-3 ${isActive ? "active" : ""}`

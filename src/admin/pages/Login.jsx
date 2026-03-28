@@ -29,7 +29,7 @@ const Login = () => {
       });
 
       setTimeout(() => {
-        navigate("/admin");
+        navigate("/admin/dashboard");
       }, 1000);
 
     } catch (err) {
