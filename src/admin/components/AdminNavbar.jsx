@@ -153,7 +153,7 @@ const AdminNavbar = ({
             </div>
           )}
         </span> */}
-         {/* 🍔 / ❌ Mobile Toggle Button */}
+       
           <button className="mobile-menu-btn" onClick={toggleSidebar}>
            <HiOutlineMenu className={`fs-5 ${isSidebarOpen ? "d-none" : ""}`} />
           </button>
