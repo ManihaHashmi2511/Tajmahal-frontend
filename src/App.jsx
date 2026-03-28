@@ -15,8 +15,23 @@ import AdminTable from "./admin/pages/AdminTable";
 import Tea from "./pages/Tea";
 import Login from "./admin/pages/Login";
 import ProtectedRoute from "./admin/components/ProtectedRoute";
+import { useEffect } from "react";
 
 function App() {
+
+
+  useEffect(() => {
+    if (window.location.hostname === "tajmahal-frontend.vercel.app") {
+      window.location.href = "https://tajmahal-foods.com";
+    }
+  }, []);
+
+  return (
+    <>
+      {/* your routes */}
+    </>
+  );
+
   return (
     <BrowserRouter>
       <Routes>
