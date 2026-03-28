@@ -52,7 +52,7 @@ function App() {
         <Route path="/admin/login" element={<Login />} />
 
         <Route
-          path="/admin/Dashboard"
+          path="/admin"
           element={
             <ProtectedRoute>
               <AdminLayout />
