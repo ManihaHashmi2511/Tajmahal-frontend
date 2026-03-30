@@ -27,12 +27,6 @@ function App() {
   }, []);
 
   return (
-    <>
-      {/* your routes */}
-    </>
-  );
-
-  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
