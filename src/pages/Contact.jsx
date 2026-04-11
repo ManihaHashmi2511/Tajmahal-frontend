@@ -56,7 +56,19 @@ export default function Contact() {
         <img src="/images/header-bg-4.png" alt="" className="pinkTopWavyImg" />
         <div className="container">
             <div className="section-title text-center mx-auto wow fadeInUp my-5" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-                <p className="fs-3 fw-medium fst-italic crumText text-white">Contact Us</p>
+                <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+              <img
+                src="/images/L-side-line-2.png"
+                className="img-fluid sideLine"
+              />
+              <p className="fs-3 fw-bold fst-italic text-white crumText">
+                Contact Us
+              </p>
+              <img
+                src="/images/R-side-line-2.png"
+                className="img-fluid sideLine"
+              />
+            </div>
                 <h1 className="display-6 text-dark">If You Have Any Query, Please Contact Us</h1>
             </div>
             <div className="row g-5 my-5">

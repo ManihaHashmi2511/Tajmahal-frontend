@@ -30,7 +30,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="col-lg-3 col-md-6">
-          <h4 className="textPrimary mb-4">Our Office</h4>
+          <div className="d-flex gap-3 align-items-center">
+            <h4 className="textPrimary mb-4">Our Office</h4>
+           <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLineFooter"
+              />
+          </div>
           <p className="mb-2">
            <FaLocationDot className='textPrimary fs-5 me-2' />
             Street 5, Dilawar Colony, Pull Abdullah West Samundari Road,
@@ -55,14 +61,26 @@ export default function Footer() {
          
         </div>
         <div className="col-lg-3 col-md-6 footerlinksDiv">
-          <h4 className="textPrimary mb-4">Quick Links</h4>
+           <div className="d-flex gap-3 align-items-center">
+            <h4 className="textPrimary mb-4">Quick Links</h4>
+           <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLineFooter"
+              />
+          </div>
           <Link className="footerlinks" to="/contact"><h5>Contact Us</h5></Link>
           <Link className="footerlinks" to="/products"><h5>Our Products</h5></Link>
           <Link className="footerlinks" to="/vision"><h5>Vision</h5></Link>
           <Link className="footerlinks" to="/mission"><h5>Mission</h5></Link>
         </div>
         <div className="col-lg-3 col-md-6">
-          <h4 className="textPrimary mb-4">Business Hours</h4>
+           <div className="d-flex gap-1 align-items-center">
+            <h4 className="textPrimary mb-4">Business Hrs</h4>
+           <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLineFooter"
+              />
+          </div>
           <p className="mb-2 fs-5"><IoIosTime className='textPrimary fs-4 me-2' /> Monday - Friday</p>
           <p className="text-white-50 fs-5">09:00 am - 07:00 pm</p>
           <p className="mb-2 fs-5"><BiSolidContact className='textPrimary fs-4 me-2' />Marketing Contacts:</p>

@@ -1257,3 +1257,120 @@ body.no-scroll { overflow: hidden; }
   color: #fff;
   cursor: pointer;
 }
+
+
+/* Events */
+/* SECTION BACKGROUND */
+.events-section {
+  background: #0D1728;
+  color: #fff;
+} 
+
+/* HEADING */
+.events-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.events-subheading {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* VIDEO */
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Zoom effect on hover */
+.video-wrapper:hover video {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+
+.title-line{
+    color: #8BE4FF;
+}
+.sideLine{
+    height: 33px;
+    margin-bottom: 13px;
+    width: 103px;
+    object-fit: contain;
+}
+.sideLineFooter{
+    width: 75px;
+    margin-bottom: 20px;
+}
+
+/* TEXT CONTENT */
+.event-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.event-content span{
+    color: #8BE4FF;
+}
+
+.confer-img {
+  width: 100%;
+  height: 257px;
+  object-fit: cover;
+}
+
+.event-tag {
+  font-size: 20px;
+  color: #8BE4FF;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.event-content h3 {
+  font-size: 2rem;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.event-content p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.event-btn {
+  background: transparent;
+  border: 1px solid #c59d5f;
+  color: #c59d5f;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.event-btn:hover {
+  background: #c59d5f;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .video-wrapper video {
+    height: 240px;
+  }
+
+  .event-content {
+    text-align: center;
+  }
+}

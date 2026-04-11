@@ -40,6 +40,7 @@ export default function Home() {
           <h1 className="display-4 HeaderText crumText fst-italic about-text mb-4 animated slideInDown">
             Welcome
           </h1>
+          
         </div>
       </div>
 
@@ -67,9 +68,12 @@ export default function Home() {
             </div>
             <div className="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
               <div className="section-title">
-                <p className="fs-2 fw-bold  crumText fst-italic textPrimary">
+                <div className="d-flex gap-3 align-items-center justify-content-center justify-content-lg-start">
+                  <p className="fs-2 fw-bold  crumText fst-italic textPrimary text-center">
                   Leadership Message
                 </p>
+                 <img src='/images/R-side-line-1.png' className="img-fluid sideLine" />
+                </div>
                 <h2 className="display-6">
                   Guiding our journey with quality at heart
                 </h2>
@@ -136,9 +140,19 @@ export default function Home() {
               data-wow-delay="0.5s"
             >
               <div className="section-title">
-                <p className="fs-2 fw-bold  crumText fst-italic textPrimary">
-                  Certificate
-                </p>
+               <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+              <img
+                src="/images/L-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+              <p className="fs-3 fw-bold fst-italic textPrimary crumText">
+                Certificate
+              </p>
+              <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+            </div>
                 <h1 className="display-6">Quality Assurance Certificate</h1>
               </div>
               <p className="my-4 huninn">

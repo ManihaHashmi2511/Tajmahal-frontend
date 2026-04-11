@@ -173,9 +173,20 @@ export default function Products() {
                 style={{ height: "102px", width: "70px" }}
                 alt=""
               />
-              <p className="fs-3 fw-bold  crumText fst-italic textPrimary mt-2">
-                Our Products
-              </p>
+
+              <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+                <img
+                  src="/images/L-side-line-1.png"
+                  className="img-fluid sideLine"
+                />
+                <p className="fs-3 fw-bold  crumText fst-italic textPrimary mt-2">
+                  Our Products
+                </p>
+                <img
+                  src="/images/R-side-line-1.png"
+                  className="img-fluid sideLine"
+                />
+              </div>
               <h1 className="display-6 text-white">
                 From Pakistan to the World, One Sweet at a Time
               </h1>

@@ -35,11 +35,7 @@ export default function Vision() {
       {/* <!-- Page Header End --> */}
 
       <div className="container-fluid aboutBg pb-5 pt-3  position-relative">
-        <img
-          src="/images/wave-040.png"
-          alt=""
-          className="wavyTopImgVision"
-        />
+        <img src="/images/wave-040.png" alt="" className="wavyTopImgVision" />
         <div className="container pb-3">
           <div className="row justify-content-center align-items-center my-3">
             <div
@@ -47,9 +43,19 @@ export default function Vision() {
               data-wow-delay="0.5s"
             >
               <div className="section-title">
-                <p className="fs-1 fw-bold  crumText fst-italic textPrimary">
-                  Our Vision
-                </p>
+                <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+                  <img
+                    src="/images/L-side-line-1.png"
+                    className="img-fluid sideLine"
+                  />
+                  <p className="fs-1 fw-bold  crumText fst-italic textPrimary">
+                    Our Vision
+                  </p>
+                  <img
+                    src="/images/R-side-line-1.png"
+                    className="img-fluid sideLine"
+                  />
+                </div>
                 <h1 className="display-6">
                   “Sweetening Lives with Tradition and Modernity”
                 </h1>
@@ -68,11 +74,7 @@ export default function Vision() {
             </div>
           </div>
         </div>
-        <img
-          src="/images/header-bg-3.png"
-          alt=""
-          className="whiteHeaderImg"
-        />
+        <img src="/images/header-bg-3.png" alt="" className="whiteHeaderImg" />
       </div>
 
       <Footer />

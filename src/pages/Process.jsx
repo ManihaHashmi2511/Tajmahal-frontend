@@ -12,9 +12,19 @@ export default function Process() {
             className="section-title text-center mx-auto wow fadeInUp "
             style={{ maxWidth: "500px" }}
           >
-            <p className="fs-2 fw-bold text-dark  crumText fst-italic text-white">
-              Our Process
-            </p>
+            <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+              <img
+                src="/images/L-side-line-2.png"
+                className="img-fluid sideLine"
+              />
+              <p className="fs-2 fw-bold fst-italic text-white crumText">
+                Our Process
+              </p>
+              <img
+                src="/images/R-side-line-2.png"
+                className="img-fluid sideLine"
+              />
+            </div>
             <h1 className=" pb-3 text-dark">How We Work</h1>
           </div>
           <div className="row rotateBgImgRow">

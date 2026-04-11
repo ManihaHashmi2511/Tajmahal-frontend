@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import EventsSection from "./EventsSection";
 
 const testimonialsText = [
   {
@@ -19,7 +20,7 @@ export default function TestimonialAndBelog() {
     setDirection("next");
     const interval = setInterval(() => {
       setCurrent((prev) =>
-        prev === testimonialsText.length - 1 ? 0 : prev + 1
+        prev === testimonialsText.length - 1 ? 0 : prev + 1,
       );
     }, 5000);
     return () => clearInterval(interval);
@@ -28,12 +29,8 @@ export default function TestimonialAndBelog() {
   return (
     <>
       {/* <!-- Testimonial Start --> */}
-      <div className="container-fluid testimonial position-relative pb-3 mb-5">
-        <img
-          src="/images/wave-040.png"
-          className="wavyTopImg"
-          alt=""
-        />
+      <div className="container-fluid testimonial position-relative py-4 mb-5">
+        <img src="/images/wave-040.png" className="wavyTopImg" alt="" />
 
         <div className="container py-5">
           <div
@@ -41,10 +38,20 @@ export default function TestimonialAndBelog() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <p className="fs-3 fw-medium fst-italic textPrimary crumText">
-              Testimonial
-            </p>
-            <h1 className="display-6">What our clients say about our sweets</h1>
+            <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+              <img
+                src="/images/L-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+              <p className="fs-3 fw-bold fst-italic textPrimary crumText">
+                Testimonial
+              </p>
+              <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+            </div>
+            <h2 className="">What our clients say about our confectionary</h2>
           </div>
           <div
             className="owl-carousel mt-5 testimonial-carousel wow fadeInUp"
@@ -88,20 +95,87 @@ export default function TestimonialAndBelog() {
       </div>
       {/* <!-- Testimonial End --> */}
 
+      <EventsSection />
+
       {/* <!-- Blog Start --> */}
       <div className="container-fluid position-relative  ">
         <div className="container py-5">
-          <div
-            className="mb-5 text-center wow fadeIn"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: "700px", margin: "auto" }}
-          >
-            <p className="fs-3 fw-medium crumText fst-italic textPrimary">
-              Our Events
-            </p>
-            <h1 className="display-6 mb-0 "> Latest Events We Organized</h1>
+          <div className="row g-5  mb-5">
+            <div className="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+              <div className="blog-item">
+                <div className="position-relative overflow-hidden rounded-top">
+                  <img
+                    className="img-fluid confer-img "
+                    src="/images/event_1.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div className="blogCaption d-flex align-items-center rounded-bottom p-3">
+                  <div className="flex-shrink-0 text-center textPrimary border-end border-white pe-3 me-3">
+                    <span>03</span>
+                    <span> / </span>
+                    <span>2026</span>
+                  </div>
+                  <a
+                    className="h5 text-decoration-none lh-base text-light"
+                    href=""
+                  >
+                    Event's Moments
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+              <div className="blog-item">
+                <div className="position-relative overflow-hidden rounded-top">
+                  <img
+                    className="img-fluid confer-img"
+                    src="/images/event_2.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div className="blogCaption d-flex align-items-center rounded-bottom p-3">
+                  <div className="flex-shrink-0 text-center textPrimary border-end border-white pe-3 me-3">
+                    <span>03</span>
+                    <span> / </span>
+                    <span>2026</span>
+                  </div>
+                  <a
+                    className="h5 text-decoration-none lh-base text-light"
+                    href=""
+                  >
+                    Event's Moments{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+              <div className="blog-item">
+                <div className="position-relative overflow-hidden rounded-top">
+                  <img
+                    className="img-fluid confer-img"
+                    src="/images/event_3.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div className="blogCaption d-flex align-items-center rounded-bottom p-3">
+                  <div className="flex-shrink-0 text-center textPrimary border-end border-white pe-3 me-3">
+                    <span>03</span>
+                    <span> / </span>
+                    <span>2026</span>
+                  </div>
+                  <a
+                    className="h5 text-decoration-none lh-base text-light"
+                    href=""
+                  >
+                    Event's Moments
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="row g-5">
+          <div className="row mb-3 g-5">
             <div className="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="blog-item">
                 <div className="position-relative overflow-hidden rounded-top">
@@ -177,11 +251,7 @@ export default function TestimonialAndBelog() {
             </div>
           </div>
         </div>
-        <img
-          src="/images/wave-40.png"
-          className="wavyBottomImg"
-          alt=""
-        />
+        <img src="/images/wave-40.png" className="wavyBottomImg" alt="" />
       </div>
       {/* <!-- Blog End --> */}
     </>

@@ -49,9 +49,20 @@ export default function Tea() {
               src="/images/tea-cup.webp"
               style={{ height: "100px", width: "88px", marginBottom: "10px" }}
             />
-            <p className="fs-3 fw-medium fst-italic textPrimary crumText">
-              Our Premium Tea
-            </p>
+
+            <div className="d-flex mb-3 gap-3  justify-content-center align-items-center">
+              <img
+                src="/images/L-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+              <p className="fs-3 fw-medium fst-italic textPrimary crumText">
+                Our Premium Tea
+              </p>
+              <img
+                src="/images/R-side-line-1.png"
+                className="img-fluid sideLine"
+              />
+            </div>
             <h1 className="display-6">
               A Cup of comfort and taste for every Day
             </h1>
